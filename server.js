@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.use('/uploads', express.static('uploads'));
 
 //enable cors
-app.use(cors());
+app.use(cors('*'));
 // enable cors
 const corsOptions = {
     origin: 'https://blog-frontend-delta-one.vercel.app/', // Update with your frontend domain
