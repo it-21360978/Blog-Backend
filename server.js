@@ -26,6 +26,13 @@ app.use('/uploads', express.static('uploads'));
 
 //enable cors
 app.use(cors());
+// enable cors
+const corsOptions = {
+    origin: 'https://blog-frontend-delta-one.vercel.app/', // Update with your frontend domain
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true, // enable set cookie
+  };
+
 // parse json data
 app.use(express.json());
 app.use(bodyParser.json());
