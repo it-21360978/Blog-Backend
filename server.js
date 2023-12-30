@@ -22,7 +22,8 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // static server storage
-app.use('/uploads', express.static('uploads'));
+app.use('/uploads/blogs', express.static('uploads/blogs'));
+
 
 //enable cors
 app.use(cors('*'));
