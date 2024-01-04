@@ -55,6 +55,9 @@ exports.viewBlog = async (req,res) => {
         if(!blog){
             return res.status(404).json({message: 'Blog not found'}); // send error response 
         }
+        // Increment views
+        blog.views += 1;
+        await blog.save();
         res.status(200).json(blog); // send data with status
     }
     catch(err){ // check error occur

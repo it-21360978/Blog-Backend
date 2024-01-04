@@ -60,6 +60,10 @@ const blogSchema = new mongoose.Schema({
         type: Date,
         default: Date.now,
     },
+    views: {
+        type: Number,
+        default: 0, // Initial views count
+      },
 });
 blogSchema.method("isAuthor", function(user) {
     return user && user._id.toString() === this.creator.toString();
