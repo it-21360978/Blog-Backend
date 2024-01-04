@@ -290,7 +290,7 @@ exports.forgotPassword = async (req, res) => {
                 <p>You have requested to reset your password.</p>
                 <p>Click on the link below to reset your password.</p>
           
-                <a href="https://it-21360978.github.io/Front-End-blog//reset/${token}">Reset Password</a>
+                <a href="https://it-21360978.github.io/reset/${token}">Reset Password</a>
 
                 <p>Best Regards,</p>
                 <p>Blog App Team</p>
